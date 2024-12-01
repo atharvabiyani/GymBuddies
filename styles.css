@@ -1,0 +1,256 @@
+/* Reset and general styling */
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+
+.container {
+    max-width: 400px;
+    width: 100%; /* Ensures the container is responsive */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    margin: auto;
+}
+
+
+#sign-up-page {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    align-items: center;
+}
+
+/* Style for the header */
+#sign-up-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+    color: #333;
+}
+
+/* Style for input fields and select boxes */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Ensure the form group takes up the full width of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.genderLabel{
+    text-align:left;
+    padding-left:2rem;
+    padding-right:2rem;
+}
+
+select {
+    text-align: left; /* Aligns the text inside the dropdown to the left */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px; /* Limit the width of input/select fields */
+    align-self: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+label {
+    margin: 5px 0;
+    text-align: left;
+}
+
+input, select, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Navigation bar styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li a i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* General layout for the buddy cards container */
+.buddy-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Adds spacing between the cards */
+    margin: 20px;
+    align-items: center;
+}
+
+
+/* Individual card styling */
+.workout-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+/* Card hover effect */
+.workout-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+}
+
+/* Heading styling inside the card */
+.workout-card h3 {
+    margin-top: 0;
+}
+
+.buddy-preferences-form{
+    width: 500px;
+    align-items: center;
+}
+
+
+.add-workout-form{
+    align-items: center;
+    margin-top: 20%;
+}
+
+.signup-up-page{
+    width: 500px;
+
+}
+
+#my-profile-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin: 5px 0;
+    align-items: center;
+    line-height: 2; /* Adjust this value to increase spacing */
+
+}
+
+
+

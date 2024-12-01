@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Buddies - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a id="workouts-link" href="#"><i class="fas fa-dumbbell"></i> My Workouts</a></li>
+            <li><a id="buddies-link" href="#"><i class="fas fa-users"></i> My Buddies</a></li>
+            <li><a id="profile-link" href="#"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <section id="home-page">
+        <h1 id="welcome-message"></h1>
+    </section>
+
+    <script>
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const firstName = urlParams.get('firstName');
+        const userId = urlParams.get('userId');
+
+        // Debugging: Log extracted parameters
+        console.log("Extracted User ID:", userId);
+        console.log("Extracted First Name:", firstName);
+
+        // Display the welcome message if firstName exists
+        const welcomeMessage = document.getElementById("welcome-message");
+        if (firstName) {
+            welcomeMessage.innerText = `Welcome to your dashboard, ${firstName}!`;
+        } else {
+            welcomeMessage.innerText = `Welcome to your dashboard!`;
+        }
+
+        // Update links dynamically
+        const workoutsLink = document.getElementById("workouts-link");
+        const buddiesLink = document.getElementById("buddies-link");
+        const profileLink = document.getElementById("profile-link");
+
+        if (userId) {
+            const queryString = `?userId=${encodeURIComponent(userId)}&firstName=${encodeURIComponent(firstName || "")}`;
+            workoutsLink.href = `workouts.php${queryString}`;
+            buddiesLink.href = `my-buddies.php${queryString}`;
+            profileLink.href = `edit-profile.html${queryString}`;
+        } else {
+            console.error("User ID is missing; cannot update links.");
+            workoutsLink.href = "#";
+            buddiesLink.href = "#";
+            profileLink.href = "#";
+        }
+
+        // Debugging: Log updated links
+        console.log("Updated Workouts Link:", workoutsLink.href);
+        console.log("Updated Buddies Link:", buddiesLink.href);
+        console.log("Updated Profile Link:", profileLink.href);
+    </script>
+</body>
+</html>
